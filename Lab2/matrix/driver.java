@@ -1,17 +1,23 @@
 import java.util.Scanner;
 
-public class matrix {
+class Matrix {
+    private int dmns, mat[][];
 
-    public static void main(String[] args) {
-        int dmns = 3;
+    public Matrix(int dimension) {
+        this.dmns = dimension;
+    }
+
+    public void input() {
         Scanner sc = new Scanner(System.in);
-        int mat[][] = new int[dmns][dmns];
+        mat = new int[dmns][dmns];
         // take input of the matrix
         for(int i=0; i<dmns; i++)
             for(int j=0; j<dmns; j++)
                 mat[i][j] = sc.nextInt();
         sc.close();
-        // calculate left diagonal sum
+    }
+
+    public void diagonalSum() {
         int lsum=0, rsum=0;
         for(int i=0; i<dmns; i++) {
             lsum+=mat[i][i];
@@ -19,5 +25,13 @@ public class matrix {
         }
         System.out.println("Left diagonal sum: "+lsum);
         System.out.println("Right diagonal sum: "+rsum);
+    }
+}
+
+public class driver {
+    public static void main(String[] args) {
+        Matrix mat = new Matrix(3);
+        mat.input();
+        mat.diagonalSum();
     }
 }
