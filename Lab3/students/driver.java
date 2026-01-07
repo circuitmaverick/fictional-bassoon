@@ -21,8 +21,8 @@ class Student {
 
     public void display() {
         System.out.println("--------Student--------");
-        System.out.println("Roll No.: "+rollno);
         System.out.println("Name: "+name);
+        System.out.println("Roll No.: "+rollno);
         System.out.println("CGPA: "+cgpa);
         System.out.println("-----------------------");
     }
@@ -36,7 +36,7 @@ public class driver {
         int n = sc.nextInt(); Student students[] = new Student[n];
         // create the student list
         for(int i=0; i<n; i++) {
-            System.out.println("Enter details of student "+i+1+"----------");
+            System.out.println("Enter details of student "+(i+1)+"----------");
             students[i] = new Student();
             students[i].input(sc);
         }

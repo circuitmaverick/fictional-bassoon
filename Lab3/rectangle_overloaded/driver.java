@@ -9,7 +9,7 @@ class Rectangle{
         this.length = l;
         this.breadth = b;
     }
-    public double area() {
+    public float area() {
         return length*breadth;
     }
 }
