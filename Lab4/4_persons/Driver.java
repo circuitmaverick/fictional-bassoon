@@ -46,7 +46,7 @@ public class Driver {
             p[i] = new Person(a_no, name);
             p[i].input(sc);
         }
-
+        sc.close();
         // display
         for(int i=0; i<3; i++) {
             System.out.println("Person " + (i+1) +"--------");
