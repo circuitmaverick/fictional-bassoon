@@ -44,7 +44,7 @@ public class Driver {
             p = new Person();
             p.input(sc);
         }
-
+        sc.close();
         // display
         for(Person p: persons) {
             p.display();
