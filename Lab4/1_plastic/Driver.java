@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 class Sheet2D {
 
     protected int rate=40;
@@ -34,24 +32,9 @@ class Box3D extends Sheet2D{
 public class Driver {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        // 2D sheet stuff
-        System.out.println("Enter the dimensions of the sheet--------");
-        System.out.print("Enter the length: ");
-        float length = sc.nextFloat();
-        System.out.print("Enter the breadth: ");
-        float breadth = sc.nextFloat();
-        Sheet2D sheet = new Sheet2D(length, breadth);
+        Sheet2D sheet = new Sheet2D(9.1f,5.9f);
         System.out.println("Cost of plastic for the 2D sheet: "+sheet.getCost());
-        System.out.println("Enter the dimensions of the box--------");
-        System.out.print("Enter the length: ");
-        length = sc.nextFloat();
-        System.out.print("Enter the breadth: ");
-        breadth = sc.nextFloat();
-        System.out.print("Enter the height: ");
-        float height = sc.nextFloat();
-        Box3D box = new Box3D(length, breadth, height);
+        Box3D box = new Box3D(6.1f, 9.3f,2.5f);
         System.out.println("Cost of plastic for the 3D box: "+box.getCost());
-        sc.close();
     }
 }

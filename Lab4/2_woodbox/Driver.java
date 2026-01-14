@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 class Plate {
 
     protected int length, width;
@@ -10,7 +8,7 @@ class Plate {
     }
 
     public void displayDim() {
-        System.out.println("-----Plate-----\nLength: "+length+"\nWidth: "+width+"---------------");
+        System.out.println("-----Plate-----\nLength: "+length+"\nWidth: "+width);
     }
 
 }
@@ -47,22 +45,10 @@ class Woodbox extends Box {
 
 public class Driver {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int length, width, height, thickness;
-        // plate stuff
-        System.out.print("Enter length and width of plate: ");
-        length = sc.nextInt(); width = sc.nextInt();
-        Plate plate = new Plate(length, width);
-        // box stuff
-        System.out.print("Enter length, width and height of the box: ");
-        length = sc.nextInt(); width = sc.nextInt(); height = sc.nextInt();
-        Box box = new Box(length, width, height);
-        // woodbox stuff
-        System.out.print("Enter length, width, height and thickness of the woodbox: ");
-        length = sc.nextInt(); width = sc.nextInt(); height = sc.nextInt(); thickness = sc.nextInt();
-        Woodbox woodbox = new Woodbox(length, width, height, thickness);
+        Plate plate = new Plate(7, 3);
+        Box box = new Box(10, 4, 20);
+        Woodbox woodbox = new Woodbox(8, 12, 4, 6);
 
-        // display each dimensions
         plate.displayDim();
         box.displayDim();
         woodbox.displayDim();

@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 class Account {
-    protected int account_no;
+    protected long account_no;
     protected float balance;
 
     public void input(Scanner reader) {
-        System.out.print("Enter account no: "); account_no = reader.nextInt();
+        System.out.print("Enter account no: "); account_no = reader.nextLong();
         System.out.print("Enter balance: "); balance = reader.nextFloat();
     }
 
@@ -16,13 +16,15 @@ class Account {
 }
 
 class Person extends Account {
-    protected int aadhaar_no;
+    protected long aadhaar_no;
     protected String name;
 
-    public Person(int aadhaar_no, String name) {
-        super();
-        this.aadhaar_no = aadhaar_no;
-        this.name = name;
+    public void input(Scanner reader) {
+            System.out.print("Enter the Aadhaar No.: ");
+            aadhaar_no = reader.nextLong(); reader.nextLine();
+            System.out.print("Enter the name: ");
+            name = reader.nextLine();
+            super.input(reader);
     }
 
     public void display() {
@@ -36,21 +38,16 @@ public class Driver {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Person p[] = new Person[3];
-        for(int i=0; i<3; i++) {
+        Person persons[] = new Person[3];
+        for(Person p: persons) {
             // get details of person
-            System.out.print("Enter the Aadhaar No.: ");
-            int a_no = sc.nextInt(); sc.nextLine();
-            System.out.print("Enter the name: ");
-            String name = sc.nextLine();
-            p[i] = new Person(a_no, name);
-            p[i].input(sc);
+            p = new Person();
+            p.input(sc);
         }
 
         // display
-        for(int i=0; i<3; i++) {
-            System.out.println("Person " + (i+1) +"--------");
-            p[i].display();
+        for(Person p: persons) {
+            p.display();
         }
     }
 
