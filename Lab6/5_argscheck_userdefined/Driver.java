@@ -5,8 +5,13 @@ class ArgsLengthException extends Exception {
 class CheckArgs {
     public void check(String[] args) throws ArgsLengthException {
         if(args.length < 4) throw new ArgsLengthException("Arguments are less than 4");
-        else
-            for(String arg: args) System.out.println(arg);
+        else {
+            int sum=0;
+            for(String arg: args) {
+                sum+=(Integer.parseInt(arg)*Integer.parseInt(arg));
+            }
+            System.out.println(sum);
+        }
     }
 }
 

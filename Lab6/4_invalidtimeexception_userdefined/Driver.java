@@ -29,7 +29,7 @@ public class Driver {
     public static void main(String[] args) {
         Time t = new Time();
         try {
-            t.setTime( 18, 19, 8);
+            t.setTime( 18, 19, -8);
         } catch(Exception e) {
             System.out.println(e);
         } finally {
