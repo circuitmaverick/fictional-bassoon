@@ -62,6 +62,7 @@ public class Driver {
             st = con.prepareStatement("delete from student where rollno=?");
             System.out.println("Enter roll no to delete: ");
             st.setInt(1, sc.nextInt());
+            st.executeUpdate();
 
             rs = show.executeQuery("SELECT * FROM STUDENT");
             rsmt = rs.getMetaData();
@@ -88,8 +89,3 @@ public class Driver {
         }
     }
 }
-
-
-/*(
-MAKE ROLL NO PRIMARY KEY AND COMPLETE THE PROGRAM
-) */

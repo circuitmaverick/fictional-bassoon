@@ -1,6 +1,5 @@
 import java.sql.*;
 import java.util.Scanner;
-
 public class Driver {
     public static void main(String[] args) {
 
@@ -8,8 +7,6 @@ public class Driver {
 
         String username = "akash";
         String password = "4k45h";
-
-        String query = "SELECT * " + "FROM STUDENT";
 
         Connection con = null;
         PreparedStatement st = null;
