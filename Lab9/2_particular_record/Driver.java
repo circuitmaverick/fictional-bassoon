@@ -6,7 +6,7 @@ public class Driver {
         String url = "jdbc:oracle:thin:@//localhost:1521/FREEPDB1";
 
         String username = "akash";
-        String password = "4k45h";
+        String password = "akAsh123";
 
         Connection con = null;
         PreparedStatement st = null;
